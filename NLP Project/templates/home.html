@@ -1,0 +1,62 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIC-UPDATES - Your Search Engine</title>
+    <!-- Link to your styles.css file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Link to your carousel.js file -->
+    <script defer src="{{ url_for('static', filename='carousel.js') }}"></script>
+</head>
+<body class="background">
+
+    <div class="navbar-carousel">
+        <!-- Add navigation buttons here -->
+        <div id="prevButton" class="nav-button">&#9665;</div>
+        <div id="nextButton" class="nav-button">&#9655;</div>
+        <div class="carousel">
+            <!-- Add your carousel images here -->
+        
+            <img src="{{ url_for('static', filename='image6.jpg') }}" alt="Image 6">
+            <img src="{{ url_for('static', filename='image7.jpg') }}" alt="Image 7">
+            <img src="{{ url_for('static', filename='image8.webp') }}" alt="Image 8">
+            <img src="{{ url_for('static', filename='image9.jpg') }}" alt="Image 9">
+            <img src="{{ url_for('static', filename='image10.jpeg') }}" alt="Image 10">
+            <img src="{{ url_for('static', filename='image11.jpg') }}" alt="Image 11">
+            <img src="{{ url_for('static', filename='image12.jpg') }}" alt="Image 12">
+            <img src="{{ url_for('static', filename='image13.webp') }}" alt="Image 13">
+            <img src="{{ url_for('static', filename='image1.webp') }}" alt="Image 1">
+            <img src="{{ url_for('static', filename='image2.jpg') }}" alt="Image 2">
+            <img src="{{ url_for('static', filename='image3.jpg') }}" alt="Image 3">
+            <img src="{{ url_for('static', filename='image4.jpg') }}" alt="Image 4">
+            <img src="{{ url_for('static', filename='image5.jpg') }}" alt="Image 5">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+ 
+    <div class="container-home">
+        <img src="{{ url_for('static', filename='india-2023-logo.png') }}" alt="Your Logo" class="logo">
+        <h1>CRIC-UPDATES</h1>
+        <div class="description">
+            <p>Welcome to CricUpdates. All your answers to the latest cricket world cup 2023 news are now just a click away.</p>
+        </div>
+        <div class="enter-query">
+            <form action="{{ url_for('index') }}" method="post">
+                <label for="query">Enter your query:</label>
+                <div class="input-container">
+                    <input type="text" name="query" id="query" required>
+                </div>
+                <button type="submit" class="button-link">Search</button>
+            </form>
+        </div>
+        <!-- Add a link/button to navigate to the admin page -->
+        <a href="{{ url_for('admin') }}">Go to Admin Page</a>
+        
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.min.js"></script>
+    <script defer src="{{ url_for('static', filename='carousel.js') }}"></script>
+</body>
+</html>

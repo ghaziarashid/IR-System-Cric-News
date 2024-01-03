@@ -1,0 +1,16 @@
+<!-- no_document_found.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='no_document_found.css') }}">
+    <title>No Document Found</title>
+</head>
+<body>
+    <h1>No Document Found</h1>
+    <p>{{ 'No such document found for ' + action.capitalize() }}</p>
+</body>
+</html>

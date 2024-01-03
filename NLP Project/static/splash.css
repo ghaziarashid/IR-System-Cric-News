@@ -1,0 +1,44 @@
+body{
+    margin: 0px;
+    background-color:black;
+    
+}
+
+
+.video-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Ensure the video is rendered behind other content */
+    height: 500px;
+    
+}
+
+
+.animation-text {
+    
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    animation:moveup 0.5s linear forwards;
+    animation-delay: 0.5s;
+    text-align: center;
+    margin-top: 530px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   
+}
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+}
+
+
+
+
+

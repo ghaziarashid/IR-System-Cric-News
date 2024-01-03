@@ -1,0 +1,26 @@
+<!-- update_document.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='update_document.css') }}">
+    <title>Update Document</title>
+</head>
+<body>
+    <h1>Update Document</h1>
+
+    <form action="/submit_update" method="post">
+        <input type="hidden" name="original_doc_name" value="{{ row_to_update['Document ID'].values[0] }}">
+        <label for="updated_doc_name">Updated Name of Document:</label><br>
+        <input type="text" id="updated_doc_name" name="updated_doc_name" value="{{ row_to_update['Document ID'].values[0] }}" required>
+        <br>
+        <label for="updated_doc_content">Updated Content of Document:</label><br>
+        <textarea id="doc_content" name="updated_doc_content" required>{{ row_to_update['Content'].values[0] }}</textarea>
+        <br>
+        <input type="submit" value="Submit Update" class="button">
+    </form>
+</body>
+</html>

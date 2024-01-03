@@ -1,0 +1,55 @@
+<!-- admin.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+
+    <div class="main-div">
+
+    <!-- Add Document Form -->
+    <form action="/add_document" method="post">
+        <h2 class="sub-heading">Add Document</h2>
+        <label for="doc_name">Enter Name of Document:</label><br>
+        <input type="text" id="doc_name" name="doc_name" required>
+        <br><br>
+        <label for="doc_content">Enter Content of Document:</label><br>
+        <textarea id="doc_content" name="doc_content" required></textarea>
+        <br>
+        <input type="submit" class="button" value="Add Document">
+    </form>
+
+    <hr>
+
+    <div class="sub-div">
+
+    <!-- Update Document Form -->
+    <form action="/update_document" method="post">
+        <h2 class="sub-heading">Update Document</h2>
+        <label for="update_doc_name">Enter Name of Document to Update:</label><br>
+        <input type="text" id="update_doc_name" name="update_doc_name" required>
+        <br>
+        <input class="button" type="submit" value="Update Document">
+    </form>
+
+    
+
+    <!-- Delete Document Form -->
+    <form action="/delete_document" method="post" style="margin-top: 140px;">
+        <h2 class="sub-heading">Delete Document</h2>
+        <label for="delete_doc_name">Enter Name of Document to Delete:</label><br>
+        <input type="text" id="delete_doc_name" name="delete_doc_name" required>
+        <br>
+        <input type="submit" class="button" value="Delete Document">
+    </form>
+</div>
+    </div>
+</body>
+</html>
